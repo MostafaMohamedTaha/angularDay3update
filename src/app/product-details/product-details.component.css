@@ -1,0 +1,17 @@
+/* product-details.component.css */
+table {
+  margin-top: 20px;
+
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.btn-danger {
+  margin-left: 10px;
+}

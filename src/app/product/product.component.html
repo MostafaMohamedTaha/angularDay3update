@@ -1,0 +1,47 @@
+<!-- product.component.html -->
+<!-- (((((((((((((((((start product name))))))))))))))))) -->
+<div class="form-group">
+  <!-- (((((((((((((((((product name))))))))))))))))) -->
+  <label for="name">
+    product name
+  </label>
+
+  <input type="text" class="form-control" id="name" [(ngModel)]="name" [ngClass]="{
+    'is-valid': isValidName(),
+    'is-invalid': !isValidName()
+  }" id="name" [(ngModel)]="name" name="name" required />
+  <!-- (((((((((((((((((product name valid))))))))))))))))) -->
+  <div class="valid-feedback">
+    well good job!
+  </div>
+  <!-- (((((((((((((((((product name invalid))))))))))))))))) -->
+  <div class="invalid-feedback">
+    please enter valid data!
+    <br>
+    the product name must be clear and more than 3 letter
+  </div>
+</div>
+<!-- (((((((((((((((((end product name))))))))))))))))) -->
+<!-- (((((((((((((((((start product price))))))))))))))))) -->
+<div class="form-group">
+  <label for="price">
+    Product Price:
+  </label>
+  <!-- (((((((((((((((((product price valid))))))))))))))))) -->
+  <input type="number" class="form-control" id="price" [(ngModel)]="price" [ngClass]="{
+    'is-valid': isValidPrice,
+    'is-invalid': !isValidPrice
+  }" id="name" [(ngModel)]="price" name="price" required />
+  <div class="valid-feedback">
+    ok it is valid price !
+  </div>
+<!-- (((((((((((((((((product price invalid))))))))))))))))) -->
+  <div class="invalid-feedback">
+    it is not valid price ! <br>
+    price must be between 100 and 2000
+  </div>
+</div>
+<!-- (((((((((((((((((end product price))))))))))))))))) -->
+
+<!-- (((((((((((((((((start add product ))))))))))))))))) -->
+<button class="btn btn-primary" (click)="addProduct()">Add Product</button>

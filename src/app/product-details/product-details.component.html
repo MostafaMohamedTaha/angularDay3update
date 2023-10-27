@@ -1,0 +1,17 @@
+<!-- product-details.component.html -->
+<table class="table" >
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td><button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
